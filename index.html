@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Git & GitHub CTF - Challenge Hub</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 700px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 50px 40px;
+      text-align: center;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      font-size: 16px;
+      opacity: 0.9;
+      margin-bottom: 5px;
+    }
+
+    .header small {
+      font-size: 12px;
+      opacity: 0.8;
+      display: block;
+      margin-top: 10px;
+    }
+
+    .content {
+      padding: 50px 40px;
+    }
+
+    .intro {
+      margin-bottom: 40px;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .intro h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: #667eea;
+    }
+
+    .intro p {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .stat-box {
+      background: #f5f7fa;
+      padding: 20px;
+      border-radius: 8px;
+      text-align: center;
+      border-left: 4px solid #667eea;
+    }
+
+    .stat-box .number {
+      font-size: 28px;
+      font-weight: bold;
+      color: #667eea;
+      margin-bottom: 5px;
+    }
+
+    .stat-box .label {
+      font-size: 12px;
+      color: #999;
+      text-transform: uppercase;
+    }
+
+    .cta-section {
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      display: block;
+      width: 100%;
+      padding: 18px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      margin-bottom: 12px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    .cta-button.secondary {
+      background: #f5f7fa;
+      color: #667eea;
+      border: 2px solid #667eea;
+    }
+
+    .cta-button.secondary:hover {
+      background: #667eea;
+      color: white;
+    }
+
+    .challenge-details {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    .challenge-details h3 {
+      margin-bottom: 15px;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .challenge-details ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .challenge-details li {
+      padding: 8px 0;
+      color: #666;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+    }
+
+    .challenge-details li:before {
+      content: "▸ ";
+      color: #667eea;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+
+    .footer {
+      background: #f5f7fa;
+      padding: 20px 40px;
+      text-align: center;
+      font-size: 12px;
+      color: #999;
+      border-top: 1px solid #e0e0e0;
+    }
+
+    @media (max-width: 600px) {
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .content {
+        padding: 30px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🚩 Git & GitHub CTF</h1>
+      <p>Capture The Flag Challenge</p>
+      <small>Explore Git, discover the flag</small>
+    </div>
+
+    <div class="content">
+      <div class="intro">
+        <h2>Welcome to the Challenge</h2>
+        <p>
+          This is an interactive Capture The Flag (CTF) challenge designed to teach you about Git and GitHub
+          through exploration and problem-solving.
+        </p>
+        <p>
+          The flag is hidden across multiple locations in this repository—in commit messages, branches, files, and
+          more. Your mission: find all four flag parts and assemble the complete flag.
+        </p>
+      </div>
+
+      <div class="stats">
+        <div class="stat-box">
+          <div class="number">4</div>
+          <div class="label">Stages</div>
+        </div>
+        <div class="stat-box">
+          <div class="number">∞</div>
+          <div class="label">Learning Potential</div>
+        </div>
+      </div>
+
+      <div class="challenge-details">
+        <h3>What You'll Learn</h3>
+        <ul>
+          <li>Navigate Git history with `git log` and `git show`</li>
+          <li>Switch between branches and explore their contents</li>
+          <li>Decode and interpret commit messages</li>
+          <li>Use lateral thinking to find hidden information</li>
+          <li>Understand repository structure and metadata</li>
+        </ul>
+      </div>
+
+      <div class="cta-section">
+        <a href="ctf.html" class="cta-button">🎮 Start Challenge</a>
+        <a href="README.md" class="cta-button secondary">📖 Read Instructions</a>
+      </div>
+
+      <div class="challenge-details">
+        <h3>Challenge Format</h3>
+        <ul>
+          <li><strong>Stage 1:</strong> Find flag part from a commit message (encoded)</li>
+          <li><strong>Stage 2:</strong> Find flag part in a file across branch commits</li>
+          <li><strong>Stage 3:</strong> Find flag part in a feature branch</li>
+          <li><strong>Stage 4:</strong> Find the final piece</li>
+        </ul>
+      </div>
+
+      <div class="challenge-details">
+        <h3>Tips</h3>
+        <ul>
+          <li>Use the browser console if you want—it's your CTF!</li>
+          <li>Each stage gives a hint when you click "Get Hint"</li>
+          <li>Hints are intentionally vague to keep the challenge engaging</li>
+          <li>Common Git commands: branch, log, show, checkout, diff</li>
+          <li>Think about encoding and hidden data structures</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Built to teach Git & GitHub through hands-on exploration • Good luck, hunter!</p>
+    </div>
+  </div>
+</body>
+</html>
