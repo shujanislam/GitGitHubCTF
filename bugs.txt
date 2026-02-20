@@ -1,0 +1,52 @@
+# bugs.txt
+# Known issues / bugs list for this project.
+# Keep entries short and actionable. Update status as fixes land.
+
+Project: <PROJECT_NAME>
+Last updated: 2026-02-20
+
+Format:
+- ID | Title | Severity | Status | Area | Steps to Reproduce | Expected | Actual | Workaround | Owner
+
+--------------------------------------------------------------------------------
+
+- BUG-001 | Login button sometimes unresponsive | Medium | Open | UI
+  Steps: Open the app, navigate to Login, click "Sign in" quickly 2–3 times.
+  Expected: Login request triggers once and UI shows loading state.
+  Actual: Button appears clicked but no request is sent.
+  Workaround: Refresh page and try again.
+  Owner: Unassigned
+
+- BUG-002 | Incorrect total shown in cart after removing item | High | Open | Checkout
+  Steps: Add 3 items to cart, remove the second item.
+  Expected: Total updates immediately and matches remaining items.
+  Actual: Total stays the same until page reload.
+  Workaround: Reload the cart page.
+  Owner: Unassigned
+
+- BUG-003 | 500 error on profile update with special characters | High | Open | API
+  Steps: Update profile name to include characters like "é" or "ø", save.
+  Expected: Profile updates successfully.
+  Actual: Server returns 500 error.
+  Workaround: Use only ASCII characters temporarily.
+  Owner: Unassigned
+
+- BUG-004 | CI pipeline fails on Windows runners | Medium | Investigating | CI/CD
+  Steps: Run workflow on windows-latest.
+  Expected: Build + tests pass on all supported OS.
+  Actual: Path-related error during install step.
+  Workaround: Use ubuntu-latest runners for now.
+  Owner: Unassigned
+
+- BUG-005 | Dark mode styles not applied on first load | Low | Open | UI
+  Steps: Enable dark mode in settings, refresh page.
+  Expected: Dark theme loads immediately.
+  Actual: Light theme flashes briefly, then dark theme applies.
+  Workaround: None.
+  Owner: Unassigned
+
+--------------------------------------------------------------------------------
+Notes:
+- Add new bugs at the top.
+- Mark fixed issues as "Resolved" and keep them for one release cycle.
+- Include screenshots/logs in the related issue/PR, not in this file.
