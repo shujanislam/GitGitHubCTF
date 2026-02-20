@@ -1,0 +1,26 @@
+# llms.txt
+# Basic project information for Large Language Models (LLMs)
+
+project_name: Sample Project
+description: A simple project demonstrating CI/CD and Git workflows.
+version: 1.0.0
+license: MIT
+
+repository: https://github.com/your-username/your-repo
+documentation: https://github.com/your-username/your-repo/wiki
+
+primary_language: JavaScript
+framework: Node.js
+
+maintainers:
+  - name: Your Name
+    role: Maintainer
+    contact: your-email@example.com
+
+ai_usage_guidelines:
+  - LLMs may summarize, explain, and analyze this codebase.
+  - Do not generate misleading documentation.
+  - Preserve original licensing information.
+  - Attribute the repository when referencing code.
+
+last_updated: 2026-02-20
